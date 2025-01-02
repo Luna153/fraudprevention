@@ -1,0 +1,562 @@
+.section-intro {
+  // web-1920
+  background-color: #333;
+  padding-top: 65px;
+  // margin-bottom: -125px;
+  z-index: 2;
+
+  .wrap__inner {
+    max-width: 1422px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    margin-top: 135px;
+  }
+
+  .section-subtitle {
+    margin-top: 25px;
+    margin-bottom: 40px;
+    letter-spacing: 1.5px;
+  }
+
+  &__card {
+
+    .splide__track {
+      padding-bottom: 66px;
+    }
+
+    .splide__arrow:disabled {
+      opacity: 0;
+    }
+
+    .splide__slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #4D4D4D;
+      border: 1px solid $color-pink;
+      padding-top: 52px;
+      padding-bottom: 70px;
+      width: 454px;
+      height: 485px;
+      box-shadow: $card-shadow;
+
+      img {
+        width: 192.5px;
+      }
+
+      .card-title {
+        display: flex;
+        align-items: flex-end;
+        margin-top: 45px;
+        margin-bottom: 35px;
+
+        .em {
+          font-size: 55px;
+        }
+
+        .sub {
+          font-size: 35px;
+          padding-bottom: 2px;
+        }
+      }
+
+      .card-desc {
+        font-size: 30px;
+        line-height: 1.33;
+        text-align: center;
+      }
+    }
+  }
+
+  &__slogon {
+    font-size: 35px;
+    margin-left: -4px;
+    padding-bottom: 12px;
+    white-space: nowrap;
+    letter-spacing: 1.2px;
+  }
+
+  &__hashtag {
+    display: flex;
+    margin-left: -4px;
+
+    .hashtag {
+      font-size: 30px;
+      padding-left: 14px;
+      padding-right: 14px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background-color: #4D4D4D;
+      white-space: nowrap;
+      margin-right: 20px;
+
+      &>span:last-child {
+        margin-left: 10px;
+      }
+    }
+
+    p {
+      font-size: 35px;
+      margin-bottom: 3px;
+      letter-spacing: 1.2px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      white-space: nowrap;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        margin-left: 29px;
+        // width: 696px;
+        height: 1px;
+        background-color: #E6E6E6;
+      }
+    }
+  }
+
+  &__memo {
+    background: #4d4d4d;
+    padding-bottom: 28px;
+    @include flex-center;
+
+    .wrap-memo {
+      width: 1540px;
+      height: 413px;
+      padding: 0 30px;
+
+      .cut-corner {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 17px 256px 0 196px;
+        margin-top: -30px;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/img_kv-pc-cut.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 2;
+        // box-shadow: $card-shadow;
+      }
+
+      .memo-text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 30px;
+        letter-spacing: 1.5px;
+        line-height: 2;
+        z-index: 2;
+        margin-bottom: 42px;
+
+        a {
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            width: 4.8px;
+            height: 4.8px;
+            background-color: #FF61BB;
+            margin-right: 13px;
+            margin-bottom: 8px;
+          }
+        }
+      }
+
+      .memo-more {
+        position: relative;
+        bottom: 12px;
+        right: 8px;
+        color: $color-pink;
+        font-size: 30px;
+        text-align: end;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          right: -5px;
+          background-color: #fff;
+          width: 156px;
+          height: 21px;
+          z-index: -1;
+        }
+
+        img {
+          width: 11px;
+          margin-left: 11px;
+          margin-bottom: 2px;
+
+        }
+      }
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 408px;
+        background: #333;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 80px;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 13%);
+        z-index: 1;
+      }
+    }
+  }
+
+  // web中版-1420
+  @include breakpoint(xl) {
+    padding-top: 35px;
+
+    .section-title {
+      margin-top: vwm(60px);
+    }
+
+    &__card {
+      .splide__track {
+        padding-bottom: 30px;
+      }
+
+      .splide__slide {
+        padding-top: 30px;
+        padding-bottom: 45px;
+        height: vwm(230px);
+
+        img {
+          width: vwm(80px);
+        }
+
+        .card-title {
+          margin-top: 20px;
+          margin-bottom: 20px;
+
+          .em {
+            font-size: vw(55px);
+          }
+
+          .sub {
+            font-size: vw(35px);
+          }
+        }
+
+        .card-desc {
+          font-size: vw(30px);
+        }
+      }
+    }
+
+    &__slogon {
+      padding-left: 45px;
+      font-size: vw(35px);
+    }
+
+    &__hashtag {
+      padding-left: 45px;
+      padding-right: 35px;
+
+      .hashtag {
+        padding-left: vwm(5px);
+        padding-right: vwm(5px);
+        padding-top: vwm(5px);
+        padding-bottom: vwm(5px);
+        font-size: vw(30px);
+        margin-right: 10px;
+
+        &>span:last-child {
+          margin-left: vw(10px);
+        }
+      }
+
+      p {
+        font-size: vw(35px);
+
+        &::after {
+          margin-left: vwm(15px);
+        }
+      }
+    }
+
+    &__memo {
+      padding-bottom: vw(50px);
+
+      .wrap-memo {
+        width: vw(1500px);
+
+        .cut-corner {
+          padding-left: vw(100px);
+          padding-right: vw(160px);
+          width: 100%;
+        }
+
+        .memo-text {
+          font-size: vw(28px);
+          margin-bottom: vw(20px);
+
+          a {
+            &::before {
+              width: vw(5px);
+              height: vw(5px);
+              margin-right: 13px;
+              margin-bottom: vw(8px);
+            }
+          }
+        }
+
+        .memo-more {
+          font-size: vw(25px);
+
+          &::after {
+            right: vwm(-5px);
+            width: vw(156px);
+            height: vw(21px);
+          }
+
+          img {
+            width: vw(12px);
+            margin-left: vw(10px);
+            margin-bottom: 0;
+
+          }
+        }
+
+        &::after {
+          content: '';
+          width: 100%;
+          height: 380px;
+          bottom: 90px;
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 25%);
+        }
+      }
+    }
+
+  }
+
+  // 行動裝置大版Pad-1024
+  @include breakpoint(md) {}
+
+  // 小網-768
+  @include breakpoint(sm) {
+    padding-top: vwm(64px);
+    padding-bottom: 0;
+    margin-bottom: vwm(-50px);
+
+    .splide__arrow[disabled] {
+      opacity: 1;
+    }
+
+    .wrap__inner {
+      max-width: vwm(700px);
+      padding: 0;
+    }
+
+    .section-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0;
+
+      &::before {
+        content: '';
+        width: 1px;
+        height: vwm(119px);
+        background-color: #EEEFEF;
+        margin-top: vwm(42px);
+        margin-bottom: vwm(40px);
+      }
+    }
+
+    .section-subtitle {
+      margin-top: vwm(35px);
+      margin-bottom: vwm(47px);
+
+      span {
+        display: block;
+      }
+    }
+
+    &__card {
+
+      .splide__track {
+        padding-bottom: vwm(30px);
+      }
+
+      .splide__pagination {
+        bottom: -3%;
+      }
+
+      .splide__pagination__page {
+        width: vwm(20px);
+        height: vwm(20px);
+        margin: 0 vwm(15px);
+        background-color: #FFFFFF;
+
+        &.is-active {
+          transform: none;
+          background-color: $color-pink;
+        }
+      }
+
+      .splide__arrow--next {
+        opacity: 1;
+        right: vwm(-89px);
+        top: vwm(311px);
+      }
+
+      .splide__arrow--prev {
+        opacity: 1;
+        left: vwm(-89px);
+        top: vwm(311px);
+      }
+
+      .splide__slide {
+        padding-top: vwm(61px);
+        padding-bottom: vwm(87px);
+        height: vwm(623px);
+
+        img {
+          width: vwm(252px);
+        }
+
+        .card-title {
+          margin-top: vwm(50px);
+          margin-bottom: vwm(47px);
+
+          .em {
+            // font-size: 55px;
+            font-size: vwm(71.5px);
+          }
+
+          .sub {
+            font-size: vwm(45.5px);
+          }
+        }
+
+        .card-desc {
+          font-size: vwm(39px);
+
+        }
+      }
+    }
+
+    &__slogon {
+      font-size: vwm(35px);
+      letter-spacing: 1.5px;
+      padding-left: 0;
+      padding-bottom: vwm(15px);
+      margin-top: vwm(86px);
+      margin-left: 0;
+    }
+
+    &__hashtag {
+      letter-spacing: 1.5px;
+      white-space: nowrap;
+      padding-left: 0;
+      margin-left: 0;
+
+      .hashtag {
+        display: flex;
+        font-size: vwm(30px);
+        padding-left: vwm(10px);
+        padding-right: vwm(10px);
+        padding-top: vwm(10px);
+        padding-bottom: vwm(10px);
+        margin-right:vwm(18px) ;
+
+        &>span:last-child {
+          margin-left: vwm(10px);
+        }
+
+
+      }
+
+      p {
+        margin-bottom: vwm(5px);
+        font-size: vwm(35px);
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &__memo {
+      padding-bottom: vwm(22px);
+
+      .wrap-memo {
+        width: vwm(800px);
+        height: vwm(521px);
+        margin: 0 auto;
+
+        .cut-corner {
+          background-image: url('../images/img_kv-mb-cut.svg');
+          padding-left: vwm(75px);
+          padding-top: vwm(41px);
+
+        }
+
+        .memo-text {
+          width: vwm(500px);
+          font-size: vwm(39px);
+          letter-spacing: 2px;
+          margin-bottom: vwm(87px);
+
+          a {
+            width: vwm(570px);
+
+            &::before {
+              width: vwm(6.5px);
+              height: vwm(6.5px);
+              margin-right: vwm(20px);
+              margin-bottom: vwm(12px);
+            }
+          }
+
+        }
+
+        .memo-more {
+          bottom: 13%;
+          font-size: vwm(39px);
+          letter-spacing: vwm(1.2px);
+
+          &::after {
+            bottom: vwm(-8px);
+            right: vwm(-5px);
+            width: vwm(203px);
+            height: vwm(27.5px);
+          }
+
+          img {
+            width: vwm(13px);
+            margin-left: vwm(18px);
+            margin-bottom: vwm(3px);
+
+          }
+        }
+
+        &::after {
+          height: vwm(470px);
+          bottom: vwm(75px);
+          clip-path: polygon(0 0, 100% 0, 100% 83%, 0 56%);
+        }
+      }
+    }
+
+  }
+
+}

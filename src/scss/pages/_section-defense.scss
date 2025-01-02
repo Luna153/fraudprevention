@@ -1,0 +1,209 @@
+.section-defense {
+  // web-1920
+  background-color: #4D4D4D;
+  padding-top: 100px;
+  padding-bottom: 122px;
+  margin-top: -78px;
+
+
+  .wrap__inner {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section-title {
+    z-index: 2;
+    span {
+      &:first-child {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .section-subtitle {
+    margin-top: 25px;
+    margin-bottom: 32px;
+    letter-spacing: 1.5px;
+  }
+
+  &__wrap-box {
+    max-width: 1420px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .card {
+    &:first-child {
+      margin-bottom: 33px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 33px;
+    }
+
+    display: flex;
+    max-width: 695px;
+    height: 238px;
+    background: linear-gradient(90deg, #333333, #3b3b3b);
+    border: 1px solid #FFFFFF;
+    padding-top: 25px;
+    padding-left: 60px;
+    padding-right: 30px;
+    box-shadow: $card-shadow;
+    flex-grow: 1;
+
+
+    img {
+      width: 108px;
+      height: 108px;
+      margin-top: 35px;
+      margin-right: 57px;
+    }
+
+    &-title {
+      font-size: 35px;
+      margin-bottom: 22px;
+    }
+
+    &-desc {
+      font-size: 30px;
+      line-height: 1.5;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  // web中版-1420
+  @include breakpoint(xl) {
+    // padding-top: vwm(10px);
+
+    .section-title {
+      line-height: 1.2;
+
+      span {
+        display: block;
+        white-space: nowrap;
+
+        &:first-child {
+          margin-right: 0;
+        }
+      }
+
+    }
+
+    &__wrap-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      &:first-child {
+        margin-bottom: 33px;
+      }
+
+      &:nth-child(3) {
+        margin-bottom: 33px;
+      }
+
+      &:nth-child(2) {
+        order: 4;
+      }
+
+      &:nth-child(4) {
+        order: 4;
+      }
+
+      height: 200px;
+      padding-top: 30px;
+      padding-left: 60px;
+      padding-right: 30px;
+      width: 100%;
+
+      img {
+        margin-top: 20px;
+      }
+
+      &-title {
+        font-size: 35px;
+        margin-bottom: 15px;
+      }
+
+      &-desc {
+        font-size: 30px;
+      }
+    }
+  }
+
+  // 行動裝置大版Pad-1024
+  @include breakpoint(md) {}
+
+  // 小網-768
+  @include breakpoint(sm) {
+    padding-top: vwm(110px);
+    padding-bottom: vwm(65px);
+    margin-top: vwm(-120px);
+
+    .section-subtitle {
+      width: vwm(570px);
+      margin: 0 auto;
+      margin-top: vwm(32px);
+      margin-bottom: vwm(50px);
+      letter-spacing: 1.7px;
+    }
+
+    &__wrap-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .card {
+      &:first-child {
+        margin: 0 auto;
+        margin-bottom: vwm(33px);
+      }
+
+      &:nth-child(2) {
+        margin: 0 auto;
+        margin-bottom: vwm(33px);
+      }
+
+      &:nth-child(3) {
+        margin: 0 auto;
+        margin-bottom: vwm(33px);
+      }
+
+      height: vwm(240px);
+      padding-top: vwm(30px);
+      padding-left: vwm(65px);
+      padding-right: vwm(5px);
+
+
+      img {
+        width: vwm(103px);
+        height: vwm(103px);
+        margin-top: vwm(40px);
+        margin-right: vwm(54px);
+      }
+
+
+      &-title {
+        font-size: vwm(39px);
+        margin-bottom: vwm(20px);
+        letter-spacing: vwm(0.1px);
+      }
+
+      &-desc {
+        font-size: vwm(35px);
+        line-height: 1.3;
+        letter-spacing: vwm(2px);
+      }
+    }
+  }
+
+}

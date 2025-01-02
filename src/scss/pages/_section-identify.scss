@@ -1,0 +1,538 @@
+.section-identify {
+  // web-1920
+  background-color: #EEEFEF;
+  padding-top: 70px;
+  padding-bottom: 168px;
+
+  @include breakpoint(sm) {
+    padding-bottom: vwm(135px);
+    // margin-top: vwm(-87px);
+    padding-top: vwm(70px);
+  }
+
+  .wrap__inner {
+    position: relative;
+    max-width: 1920px;
+    padding: 0 20px;
+
+    @include breakpoint(sm) {
+      padding: 0;
+    }
+  }
+
+  &_material {
+
+    &-pic {
+      position: absolute;
+      width: 357px;
+
+      &:nth-child(1) {
+        top: 232px;
+        right: calc(50% - 524px);
+      }
+
+      &:nth-child(2) {
+        bottom: 105px;
+        left: calc(50% - 711px);
+      }
+
+      @include breakpoint(xl) {
+        width: vw(357px);
+
+        &:nth-child(1) {
+          right: calc(50% - #{vw(524px)});
+        }
+
+        &:nth-child(2) {
+          left: calc(50% - #{vw(711px)});
+        }
+      }
+
+      @include breakpoint(md) {
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+
+      @include breakpoint(sm) {
+        display: none;
+      }
+    }
+
+    &-link {
+
+      &--title {
+        display: flex;
+        padding-top: 59px;
+        position: relative;
+        left: calc(50% - 318px);
+        max-width: 800px;
+
+        @include breakpoint(sm) {
+          left: auto;
+
+          padding: vwm(53px) vwm(20px) vwm(50px) vwm(30px);
+        }
+
+        img {
+          width: 30px;
+
+          @include breakpoint(sm) {
+            width: vwm(60px);
+            padding-left: vwm(20px);
+          }
+        }
+
+        h4 {
+          font-size: 35px;
+          color: $color-pink;
+          padding-left: 14px;
+
+          @include breakpoint(md) {
+            font-size: vw(35px);
+          }
+
+          @include breakpoint(sm) {
+            font-size: vwm(45px);
+            padding-right: vwm(20px);
+            padding-left: vwm(20px);
+          }
+        }
+      }
+
+      .padding-1 {
+        @include breakpoint(sm) {
+          padding-top: vwm(97px);
+        }
+      }
+
+      .padding-2 {
+        @include breakpoint(sm) {
+          padding-top: vwm(115px);
+        }
+      }
+
+      &--text-1,
+      &--text-2 {
+        position: relative;
+        max-width: 850px;
+        padding-right: 20px;
+
+
+        @include breakpoint(sm) {
+          // padding-right: vwm(20px);
+          // padding-left: vwm(113px);
+        }
+
+        .line {
+          margin-bottom: 36px;
+          padding-left: 4px;
+          position: relative;
+
+          @include breakpoint(sm) {
+            margin-bottom: vwm(60px);
+            padding-left: vwm(20px);
+          }
+
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+
+          &::after {
+            content: '';
+            height: 87%;
+            width: 5px;
+            background-color: #C9CACA;
+            position: absolute;
+            left: -10px;
+            top: 0;
+
+            @include breakpoint(sm) {
+              width: vwm(8px);
+            }
+          }
+        }
+
+        p {
+          font-size: 22px;
+          color: #D42675;
+          padding-bottom: 11px;
+
+          @include breakpoint(md) {
+            font-size: vw(22px);
+          }
+
+          @include breakpoint(sm) {
+            font-size: vwm(37px);
+            padding-bottom: vwm(16.7px);
+          }
+
+        }
+
+        a {
+          display: block;
+          font-size: 20px;
+          letter-spacing: 0.1px;
+          font-family: $custom-font-en;
+          word-break: break-all;
+
+          @include breakpoint(md) {
+            font-size: vw(20px);
+          }
+
+          @include breakpoint(sm) {
+            font-size: vwm(33px);
+            line-height: 1.2;
+            letter-spacing: 0.4px;
+          }
+        }
+      }
+
+      &--text-1 {
+        left: calc(50% - 267px);
+        padding-top: 41px;
+        margin-bottom: 40px;
+
+        @include breakpoint(sm) {
+          left: auto;
+          margin-bottom: 0;
+          padding-top: 0;
+          padding-right: vwm(20px);
+          padding-left: vwm(113px);
+
+        }
+      }
+
+      &--text-2 {
+        left: calc(50% - 266px);
+        padding-top: 33px;
+
+        @include breakpoint(sm) {
+          left: auto;
+          padding-top: 0;
+          padding-right: vwm(63px);
+          padding-left: vwm(113px);
+          margin-top: vwm(-4px);
+
+          p {
+            padding-bottom: vwm(20px);
+          }
+
+          a {
+            max-width: vwm(536px);
+          }
+        }
+      }
+    }
+  }
+
+  &_table {
+    max-width: 773px;
+    text-align: center;
+    position: relative;
+    left: calc(50% - 277px);
+    margin: 38px 0 25px 0;
+    border-left: 1px solid #C9CACA;
+
+    @include breakpoint(md) {
+      max-width: vw(1050px);
+      // left: calc(50% - #{vw(300px)});
+    }
+
+    @include breakpoint(sm) {
+      max-width: 100%;
+      left: auto;
+      margin: vwm(9px) 0 0 0;
+    }
+
+    .table-td {
+      &-4 {
+        border: 1px solid transparent;
+      }
+
+      &-1-account {
+        padding: 35px 13px;
+
+        @include breakpoint(md) {
+          padding: vw(45px) 0;
+        }
+
+        @include breakpoint(sm) {
+          padding: vwm(45px) 0;
+        }
+      }
+
+      &-2-account {
+        padding: 36px 11px 52px;
+
+        @include breakpoint(md) {
+          padding: vw(45px) 0;
+        }
+
+        @include breakpoint(sm) {
+          padding: vwm(47px) 0 vwm(50px);
+
+          .section-identify_table-td-link {
+
+            &:nth-child(2),
+            &:nth-child(4) {
+              margin-left: vwm(-29px);
+            }
+          }
+        }
+      }
+
+      &-3-account {
+        padding: 39px 13px 43px;
+
+        @include breakpoint(md) {
+          padding: vw(45px) 0;
+        }
+
+        @include breakpoint(sm) {
+          padding: vwm(47px) 0 vwm(56px);
+
+          .section-identify_table-td-link {
+            &:nth-child(2) {
+              margin-left: vwm(-29px);
+            }
+          }
+        }
+      }
+
+      &-4-account {
+        padding: 36px 11px;
+
+        @include breakpoint(md) {
+          padding: vw(45px) 0;
+        }
+
+        @include breakpoint(sm) {
+          padding: vwm(47px) 0;
+        }
+      }
+
+      &-1-type {
+        padding-top: 7px;
+      }
+
+      &-2-type {
+        @include breakpoint(sm) {
+          padding-top: vwm(12px);
+
+          img {
+            margin-top: vwm(-178px);
+          }
+        }
+      }
+
+      &-3-type {
+        padding-top: 2px;
+
+      }
+    }
+
+    &-wrap {
+      max-width: 773px;
+    }
+
+    &-th-text,
+    &-td-type {
+
+      &:first-child {
+        flex: 0 0 239px;
+        border-right: 1px solid #C9CACA;
+
+        @include breakpoint(md) {
+          flex: 0 0 vw(350px);
+        }
+
+        @include breakpoint(sm) {
+          flex: 0 0 vwm(269px);
+        }
+      }
+
+      &:not(:first-child) {
+        flex: 1;
+      }
+    }
+
+    &-th {
+      display: flex;
+      background-color: #FF61BB;
+      color: #fff;
+      font-size: 26px;
+
+      @include breakpoint(md) {
+        font-size: vw(26px);
+      }
+
+      @include breakpoint(sm) {
+        margin-top: vwm(8px);
+        font-size: vwm(34px);
+      }
+    }
+
+    &-th-text {
+      padding: 12px 0;
+
+      @include breakpoint(sm) {
+        padding: vwm(15px) 0;
+      }
+    }
+
+    &-td {
+      display: flex;
+      background-color: #fff;
+      border-bottom: 1px solid #C9CACA;
+
+      p {
+        font-weight: bold;
+        font-family: '微軟正黑體';
+      }
+
+    }
+
+    // 社群類別
+    &-td-type {
+      @include flex-center;
+      flex-direction: column;
+
+      p {
+        font-size: 21.6px;
+        margin-top: 6px;
+
+        @include breakpoint(md) {
+          font-size: vw(21.6px);
+          margin-top: vwm(10px);
+        }
+
+        @include breakpoint(sm) {
+          font-size: vwm(28px);
+          margin-top: vwm(10px);
+        }
+      }
+
+    }
+
+    // 經營帳號
+    &-td-account {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -38px;
+
+
+      @include breakpoint(sm) {
+        margin-bottom: vwm(-48px);
+      }
+
+      .line-icon {
+        display: flex;
+        justify-content: center;
+        margin-top: 2px;
+
+        img {
+          width: 15px;
+          height: 16.5px;
+
+          @include breakpoint(md) {
+            width: vw(20px);
+            height: vw(22px);
+          }
+
+          @include breakpoint(sm) {
+            width: vwm(20px);
+            height: vwm(22px);
+          }
+        }
+      }
+    }
+
+    &-td-link {
+      flex: 0 0 33%;
+      box-sizing: border-box;
+      margin-bottom: 38px;
+      @include breakpoint(sm) {
+        margin-bottom: vwm(48px);
+      }
+
+      @include breakpoint(sm) {
+        flex: 0 0 50%;
+      }
+      &>img{
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 16px;
+        letter-spacing: 0.3px;
+
+        @include breakpoint(md) {
+          font-size: vw(16px);
+        }
+
+        @include breakpoint(sm) {
+          font-size: vwm(21px);
+        }
+      }
+
+      img {
+        margin-bottom: 2px;
+
+        @include breakpoint(sm) {
+          margin-bottom: vwm(5px);
+        }
+      }
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+
+      @include breakpoint(md) {
+        width: vw(90px);
+        height: vw(90px);
+      }
+
+      @include breakpoint(sm) {
+        width: vwm(78px);
+        height: vwm(78px);
+      }
+    }
+  }
+
+  &_icons {
+    // display: flex;
+    padding-top: 32px;
+    position: relative;
+    left: calc(50% - 260px);
+    max-width: 600px;
+
+    @include breakpoint(sm) {
+      left: calc(50% - #{vwm(260px)});
+      // left: auto;
+      padding: vwm(50px) vwm(20px) 0 vwm(7px);
+    }
+
+    img {
+      width: 90px;
+      // height: auto;
+      margin-right:26.5px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include breakpoint(md) {
+        width: vw(120px);
+      }
+
+      @include breakpoint(sm) {
+        width: vwm(90px);
+        margin-right: vwm(26.5px);
+      }
+    }
+  }
+
+}

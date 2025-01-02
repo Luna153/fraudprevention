@@ -1,0 +1,94 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3em;
+}
+// @supports (scrollbar-gutter: stable) {
+//   html {
+//     scrollbar-gutter: stable;
+//   }
+// }
+body {
+  height: 100%;
+}
+
+// 對照設計稿
+// ---------------------------------
+.sketch {
+  width: 100%;
+  opacity: 0.2;
+  position: absolute;
+  // top: 40px;
+  z-index: 5;
+}
+
+// 共用
+// ---------------------------------
+.section {
+  position: relative;
+
+  &-title {
+    font-size: 70px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: $color-pink;
+    // padding: 0 px-em(10, 50) px-em(16, 50);
+    position: relative;
+    min-width: 220px;
+    display: inline-block;
+
+    &_pc {
+      @include breakpoint(sm) {
+        display: none;
+      }
+    }
+
+    &_sm {
+      display: none;
+      @include breakpoint(sm) {
+        display: block;
+        line-height: 1.2;
+      }
+    }
+
+    &_space {
+      padding-left: 35px;
+      @include breakpoint(sm) {
+        padding-left: vwm(42px);
+      }
+    }
+  }
+  &-subtitle {
+    font-style: normal;
+    font-size: 30px;
+    line-height: 1.5;
+  }
+
+  &-kv {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include breakpoint(md) {
+    &-title {
+      font-size: vw(70px);
+    }
+  }
+
+  @include breakpoint(sm) {
+    padding-top: vwm(60px);
+    padding-bottom: vwm(35px);
+    &-title {
+      font-size: vwm(80px);
+    }
+    &-subtitle {
+      font-size: vwm(39px);
+      line-height: 1.4;
+    }
+    &-kv {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

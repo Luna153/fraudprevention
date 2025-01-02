@@ -1,0 +1,533 @@
+path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.section-kv {
+  // web-1920
+  background: #eeefef;
+  height: 769px;
+
+  .wrap__inner {
+    max-width: 1920px;
+  }
+
+  &__decobox {
+    width: 100%;
+    height: 100%;
+
+    .main {
+
+      &-bg-text {
+        .right-text {
+          position: relative;
+          right: 0%;
+          p {
+            &:nth-child(1) {
+              // 解除分期付款
+              font-size: 55px;
+              width: 8.5em;
+              top: 255px;
+              left: calc(50% + 480px);
+              transform: scale(1, 1.5);
+              transform-origin: 0, 0;
+              letter-spacing: 3px;
+            }
+
+            &:nth-child(2) {
+              // 假網路拍賣
+              font-size: 125px;
+              width: 11em;
+              top: 411px;
+              left: calc(50% + 326px);
+            }
+
+            &:nth-child(3) {
+              // 猜猜我是誰
+              font-size: 95px;
+              width: 11em;
+              top: 671px;
+              left: calc(50% + 470px);
+            }
+          }
+        }
+
+        .no-border-right {
+          border-right: none !important;
+        }
+
+        p {
+          position: absolute;
+          overflow: hidden;
+          white-space: nowrap;
+          font-family: '微軟正黑體';
+          font-weight: bold;
+          color: #C8C9CA;
+
+          &:first-child {
+            // 詐騙嫌疑犯
+            font-size: 108px;
+            top: 35px;
+            left: calc(50% - 948px);
+          }
+
+          &:nth-child(2) {
+            // 猜猜我是誰
+            font-size: 145px;
+            width: 5em;
+            top: 295px;
+            left: calc(50% - 947px);
+            // animation: typing 2s steps(5),
+            //   caret 1s steps(1);
+          }
+        }
+      }
+
+      &-bg {
+        // animation: fadeIn 1.5s ease-in;
+
+        img, object {
+          position: absolute;
+          width: 100%;
+
+          &:nth-child(1) {
+            width: 360px;
+            top: 173px;
+            left: calc(50% - 835px);
+          }
+
+          &:nth-child(2) {
+            width: 392px;
+            top: 176px;
+            left: calc(50% - 450px);
+          }
+
+          &:nth-child(3) {
+            width: 1250px;
+            top: 555px;
+            left: calc(50% - 950px);
+          }
+
+          &:nth-child(4) {
+            width: 760px;
+            top: 38px;
+            right: calc(50% - 955px);
+          }
+
+        }
+      }
+
+      &-group {
+        img {
+          position: absolute;
+          width: 100%;
+          z-index: 2;
+
+          &:nth-child(1) {
+            width: 175px;
+            top: 111px;
+            right: calc(50% - 205px);
+          }
+
+          &:nth-child(2) {
+            width: 592px;
+            top: 158px;
+            right: calc(50% - 678px);
+          }
+        }
+      }
+
+      &-text {
+        position: relative;
+        width: 714px;
+        min-height: 405px;
+        background-image: url("../images/img_kv-title-bg.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 264px;
+        left: calc(50% - 637px);
+
+        img {
+          position: absolute;
+
+          @for $i from 1 through 8 {
+            &:nth-child(#{$i}) {
+              animation-delay: #{0.1 * $i}s;
+            }
+          }
+
+          &:nth-child(1) {
+            width: 133px;
+            top: 12px;
+            left: 138px;
+          }
+
+          &:nth-child(2) {
+            width: 139px;
+            top: 12px;
+            left: 260px;
+          }
+
+          &:nth-child(3) {
+            width: 142px;
+            top: 12px;
+            left: 392px;
+          }
+
+          &:nth-child(4) {
+            width: 143px;
+            top: 12px;
+            left: 523px;
+          }
+
+          &:nth-child(5) {
+            width: 134px;
+            top: 170px;
+            left: 96px;
+          }
+
+          &:nth-child(6) {
+            width: 150px;
+            top: 170px;
+            left: 218px;
+          }
+
+          &:nth-child(7) {
+            width: 127px;
+            top: 170px;
+            left: 358px;
+          }
+
+          &:nth-child(8) {
+            width: 119px;
+            top: 178px;
+            left: 495px;
+          }
+        }
+      }
+
+    }
+  }
+
+  // 行動裝置大版Pad-1200
+  @include breakpoint(xl) {
+    height: vw(768px);
+
+    &__decobox {
+
+      .main {
+        position: relative;
+        &-bg-text {
+          .right-text{
+            p{
+              &:nth-child(1) {
+                // outline:red 1px solid;
+                // 解除分期付款
+                font-size: vw(55px);
+                top: vw(255px);
+                left: xy(83.8, 100);
+              }
+
+              &:nth-child(2) {
+                // 假網路拍賣
+                font-size: vw(125px);
+                top: vw(412.5px);
+                left: xy(72.8, 100);
+              }
+
+              &:nth-child(3) {
+                // 猜猜我是誰
+                font-size: vw(98px);
+                top: vw(667px);
+                left: xy(82.8, 100);
+              }
+            }
+          }
+
+          p {
+
+            &:first-child {
+              // 詐騙嫌疑犯
+              font-size: vw(107.3px);
+              top: xy(4.8, 100);
+              left: xy(-16, 100);
+            }
+
+            &:nth-child(2) {
+              // 猜猜我是誰
+              font-size: vw(146px);
+              top: xy(38, 100);
+              left: xy(-16.5, 100);
+            }
+          }
+        }
+
+        &-bg {
+
+          img, object {
+
+            &:nth-child(1) {
+              width: vw(350px);
+              top: vw(175px);
+              left: xy(-8.2, 100);
+            }
+
+            &:nth-child(2) {
+              width: vw(395px);
+              top: vw(175px);
+              left: xy(18.3, 100);
+            }
+
+            &:nth-child(3) {
+              width: vw(1250px);
+              top: vw(560px);
+              left: xy(-17, 100);
+            }
+
+            &:nth-child(4) {
+              width: vw(754.5px);
+              top: 38px;
+              right: xy(-17.1, 100);
+            }
+
+          }
+        }
+
+        &-group {
+          img {
+
+            &:nth-child(1) {
+              width: vw(174px);
+              top: xy(14.5, 100);
+              right: xy(35.5, 100);
+            }
+
+            &:nth-child(2) {
+              width: vw(598px);
+              top: xy(20.3, 100);
+              right: xy(1.9, 100);
+            }
+          }
+        }
+
+        &-text {
+          width: vw(720px);
+          top: 18.5vw;
+          left: xy(5, 100);
+
+
+          img {
+
+            &:nth-child(1) {
+              width: vw(135px);
+              top:12px;
+              left: xy(19.5, 100);
+            }
+
+            &:nth-child(2) {
+              width: vw(138px);
+              top: 13px;
+              left: xy(36.2, 100);
+            }
+
+            &:nth-child(3) {
+              width: vw(138px);
+              top: 15px;
+              left: xy(55, 100);
+            }
+
+            &:nth-child(4) {
+              width: vw(140px);
+              top: 14px;
+              left: xy(73, 100);
+            }
+
+            &:nth-child(5) {
+              width: vw(138px);
+              top: 12vw;
+              left: xy(13.5, 100);
+            }
+
+            &:nth-child(6) {
+              width: vw(146.8px);
+              top: 12.1vw;
+              left: xy(30.8, 100);
+            }
+
+            &:nth-child(7) {
+              width: vw(129px);
+              top: 12vw;
+              left: xy(50, 100);
+            }
+
+            &:nth-child(8) {
+              width: vw(120px);
+              top: 12.5vw;
+              left: xy(69, 100);
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+  // 小網-768
+  @include breakpoint(sm) {
+    padding-top: 22px;
+    margin-top: vwm(51px);
+    height: vwm(986px);
+
+    &__decobox {
+      left: 0;
+
+      .main {
+        &-bg-text {
+          .right-text {
+            p{
+              &:nth-child(1) {
+                // 解除分期付款
+                font-size: vwm(50px);
+                top: vwm(665px);
+                left: vwm(655px);
+              }
+
+              &:nth-child(2) {
+                // 假網路拍賣
+                font-size: vwm(125px);
+                top: vwm(460px);
+                left: vwm(-405px);
+              }
+
+              &:nth-child(3) {
+                // 猜猜我是誰
+                font-size: vwm(95px);
+                top: vwm(625px);
+                left: vwm(10px);
+              }
+
+            }
+          }
+          p {
+
+            &:first-child {
+              // 詐騙嫌疑犯
+              font-size: vwm(107px);
+              top: vwm(-9px);
+              left: calc(50% - #{vwm(363px)});
+            }
+
+            &:nth-child(2) {
+              // 猜猜我是誰
+              font-size: vwm(145px);
+              top: vwm(268px);
+              left: calc(50% - #{vwm(356px)});
+            }
+          }
+        }
+
+        &-bg {
+          img, object {
+            &:nth-child(1) {
+              display: none;
+            }
+
+            &:nth-child(2) {
+              width: vwm(391px);
+              top: vwm(142px);
+              left: calc(50% - #{vwm(37px)});
+            }
+
+            &:nth-child(3) {
+              width: vwm(1245px);
+              top: vwm(440px);
+              left: calc(50% + #{vwm(115px)});
+            }
+
+            &:nth-child(4) {
+              width: vwm(762px);
+              top: vwm(816px);
+              left: calc(50% - #{vwm(395px)});
+            }
+          }
+        }
+
+        &-group {
+          img {
+            &:nth-child(1) {
+              width: vwm(142px);
+              top: vwm(432px);
+              right: calc(50% + #{vwm(20px)});
+            }
+
+            &:nth-child(2) {
+              width: vwm(485px);
+              top: vwm(485px);
+              right: calc(50% - #{vwm(378px)});
+            }
+          }
+        }
+
+        &-text {
+          width: vwm(612px);
+          top: vwm(95px);
+          left: calc(50% - #{vwm(330px)});
+
+          img {
+            &:nth-child(1) {
+              width: vwm(115px);
+              top: vwm(12px);
+              left: vwm(118px);
+            }
+
+            &:nth-child(2) {
+              width: vwm(119px);
+              top: vwm(12px);
+              left: vwm(222px);
+            }
+
+            &:nth-child(3) {
+              width: vwm(122px);
+              top: vwm(12px);
+              left: vwm(337px);
+            }
+
+            &:nth-child(4) {
+              width: vwm(122px);
+              top: vwm(12px);
+              left: vwm(448px);
+            }
+
+            &:nth-child(5) {
+              width: vwm(115px);
+              top: vwm(148px);
+              left: vwm(82px);
+            }
+
+            &:nth-child(6) {
+              width: vwm(128px);
+              top: vwm(148px);
+              left: vwm(186px);
+            }
+
+            &:nth-child(7) {
+              width: vwm(109px);
+              top: vwm(148px);
+              left: vwm(306px);
+            }
+
+            &:nth-child(8) {
+              width: vwm(102px);
+              top: vwm(155px);
+              left: vwm(425px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

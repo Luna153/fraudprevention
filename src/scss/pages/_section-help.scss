@@ -1,0 +1,152 @@
+.section-help {
+  // web-1920
+  padding-top: 80px;
+  padding-bottom: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #4D4D4D;
+
+  @include breakpoint(md) {
+    padding-top: vw(80px);
+    padding-bottom: vw(90px);
+    padding-left: vw(50px);
+    padding-right: vw(50px);
+  }
+
+  @include breakpoint(sm) {
+    padding-top: vwm(71px);
+    padding-bottom: vwm(78px);
+  }
+
+  &_block{
+    display: flex;
+    justify-content: center;
+    // flex-wrap: wrap;
+    gap: 57px;
+    
+    @include breakpoint(xl) {
+      gap: vwpc(57px);
+    }
+
+    @include breakpoint(lg) {
+      gap: vwpc(40px);
+    }
+
+    @include breakpoint(md) {
+      gap: 2%;
+    }
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-content{
+      width: 320px;
+      padding: 88px 10px 0 10px;
+
+      @include breakpoint(md) {
+        width: vw(320px);
+        padding: vw(88px) vw(0px) 0 vw(10px);
+      }
+
+      @include breakpoint(sm) {
+        width: vwm(615px);
+        padding: vwm(60px) 0 vwm(20px) 0;
+      }
+
+      &--pic{
+        width: 220px;
+        border-radius: 50%;
+        border: 2px $color-pink-dark solid;
+        background-color: $white;
+        box-shadow: $card-shadow;
+        margin: 0 auto;
+
+        @include breakpoint(xl) {
+          width: vw(220px);
+        }
+
+        @include breakpoint(lg) {
+          width: vw(200px);
+        }
+
+        @include breakpoint(md) {
+          width: vw(220px);
+        }
+
+        @include breakpoint(sm) {
+          width: vwm(285px);
+        }
+
+        img{
+          width: 100%;
+        }
+      }
+
+      &--title{
+        font-size: 35px;
+        color: $color-pink;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 25px;
+        white-space: nowrap;
+
+        @include breakpoint(xl) {
+          font-size: 30px;
+        }
+
+        @include breakpoint(lg) {
+          font-size: 28px;
+        }
+
+        @include breakpoint(md) {
+          font-size: vw(35px);
+          padding-top: vw(45px);
+          padding-bottom: vw(30px);
+        }
+
+        @include breakpoint(sm) {
+          font-size: vwm(45px);
+          padding-top: vwm(50px);
+          padding-bottom: vwm(22px);
+          letter-spacing: 1px;
+        }
+      }
+
+      &--text{
+        font-size: 30px;
+        color: $white;
+        line-height: 1.5;
+        text-align: justify;
+
+        @include breakpoint(xl) {
+          font-size: 25px;
+        }
+
+        @include breakpoint(lg) {
+          font-size: 23px;
+        }
+
+        @include breakpoint(md) {
+          font-size: vw(30px);
+        }
+
+        @include breakpoint(sm) {
+          font-size: vwm(39px);
+        }
+      }
+    }
+  }
+
+
+    // // web中版-1420
+    // @include breakpoint(xl) {
+    // }
+    // // 行動裝置大版Pad-1024
+    // @include breakpoint(md) {
+    // }
+    // // 小網-768
+    // @include breakpoint(sm) {
+    // }
+  }

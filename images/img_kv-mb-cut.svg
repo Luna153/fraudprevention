@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 720 468">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #eeefef;
+        filter: url(#drop-shadow-13);
+        stroke-width: 0px;
+      }
+    </style>
+    <filter id="drop-shadow-13" filterUnits="userSpaceOnUse">
+      <feOffset dx="6.95" dy="6.95"/>
+      <feGaussianBlur result="blur" stdDeviation="13.9"/>
+      <feFlood flood-color="#000" flood-opacity=".3"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <polygon class="cls-1" points="703.2 2.03 71.61 2.03 3.2 70.44 3.2 450.89 634.8 450.89 703.2 382.49 703.2 2.03"/>
+</svg>

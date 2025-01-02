@@ -1,0 +1,29 @@
+mixin section-kv()
+  section.section.section-kv#section-kv
+    .wrap__inner
+      .section-kv__decobox
+        //- 1-9背景圖
+        .main-bg
+          img(src='images/img_kv-text-2.svg' alt='')
+          img(src='images/img_kv-text-3.svg' alt='')
+          object(data="images/img_kv-text-5.svg", type="image/svg+xml")
+          object(data="images/img_kv-text-6.svg", type="image/svg+xml")
+        .main-group
+          img(src='images/img_kv-speech.svg' alt='')
+          img(src='images/img_kv-group1.svg' alt='')
+        .main-bg-text
+          p.gasp-text-1
+          p.gasp-text-2
+          //- p.gasp-text-2 猜猜我是誰
+          .right-text
+            //- 解除分期付款詐欺
+            //- 假網路拍賣
+            //- 猜猜我是誰
+            p.gasp-text-3
+            p.gasp-text-4
+            p.gasp-text-5
+        .main-text
+          - for (var i = 1; i <= 8; i++)
+            img(src=`images/img_kv-title-text-${i}.svg`, alt=['警', '覺', '詐', '騙', '保', '護', '自', '己'][i - 1])
+
+

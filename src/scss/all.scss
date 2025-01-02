@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+// generall setting
+@import "vendors/reset";
+@import "vendors/variables";
+// @import "vendors/typography";
+@import "vendors/mixins";
+@import "vendors/function";
+
+@import "vendors/bootstrap4/bootstrap-grid.scss"; // grid system
+
+//layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/layout";
+
+//component
+@import "component/public";
+@import "component/keyframe";
+@import "component/toggle";
+@import "component/splide";
+@import "component/animate";
+// @import "component/form";
+@import "component/js-animate";
+
+//pages
+@import "pages/index";
+@import "pages/section-kv"; //banner
+@import "pages/section-intro"; //快豐鎖+ 勇敢反詐快訊
+@import "pages/section-defense"; //永豐4防線
+@import "pages/section-sop"; //反詐SOP
+@import "pages/section-identify"; //識別正確網址與官方APP
+@import "pages/section-help"; //我來幫您！
+@import "pages/section-info"; //資訊公告及線上查詢

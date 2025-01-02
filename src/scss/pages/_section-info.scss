@@ -1,0 +1,153 @@
+.section-info {
+  // web-1920
+  background-color: $color-black;
+  padding-top: 68px;
+  padding-bottom: 65px;
+  // padding-left: 250px;
+
+  .wrap__inner{
+    padding-left: 60px;
+    padding-right: 60px;
+    max-width: 1540px;
+
+    @include breakpoint(md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @include breakpoint(xl) {
+    padding-left: 7%;
+  }
+
+  @include breakpoint(md) {
+    padding-top: vw(68px);
+    padding-bottom: vw(65px);
+    padding-left: 10%;
+  }
+
+  @include breakpoint(sm) {
+    padding-top: vwm(55px);
+    padding-bottom: vwm(70px);
+    padding-left: vwm(88px);
+    padding-right: vwm(70px);
+  }
+
+    &_title {
+      font-size: 35px;
+      color: $color-pink;
+      padding-bottom: 42px;
+
+      @include breakpoint(md) {
+        font-size: vw(35px);
+        padding-bottom: vw(40px);
+      }
+
+      @include breakpoint(sm) {
+        font-size: vwm(45px);
+        padding-bottom: vwm(56px);
+        letter-spacing: 0.5px;
+      }
+    }
+
+    &_content {
+      font-size: 30px;
+      display: flex;
+
+      @include breakpoint(md) {
+        font-size: vw(30px);
+      }
+
+      @include breakpoint(sm) {
+        font-size: vwm(39px);
+        flex-direction: column;
+      }
+
+      &-block {
+
+        &:nth-child(1) {
+          margin-right:28.6%;
+          @include breakpoint(sm) {
+            padding-bottom: vwm(63px);
+            margin-right:0;
+          }
+        }
+
+        &--head {
+          color: $color-pink;
+          padding-bottom: 34px;
+          position: relative;
+
+          @include breakpoint(md) {
+            padding-bottom: vw(40px);
+          }
+
+          @include breakpoint(sm) {
+            padding-bottom: vwm(45px);
+          }
+
+          &::after{
+            content: '';
+            width: 452px;
+            height: 2px;
+            background-color: $color-pink;
+            position: absolute;
+            bottom: 23%;
+            left: 0;
+
+            @include breakpoint(md) {
+              width: vw(452px);
+              height: vw(2px);
+            }
+
+            @include breakpoint(sm) {
+              width: 96%;
+              bottom: vwm(20px);
+            }
+          }
+        }
+
+        &--link {
+          color: $white;
+          line-height: 2;
+
+          a {
+            display: block;
+            position: relative;
+            
+            img{
+              width: 7px;
+              margin-left: 14px;
+              margin-bottom: 3px;
+
+              @include breakpoint(md) {
+                margin-left: vw(14px);
+                margin-bottom: vw(3px);
+              }
+
+              @include breakpoint(sm) {
+                width: 12px;
+                margin-left: vwm(15px);
+              }
+
+              @include breakpoint(sm) {
+                width: vwm(12px);
+                margin-left: vwm(17px);
+                margin-bottom: vwm(4px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // // web中版-1420
+    // @include breakpoint(xl) {
+    // }
+    // // 行動裝置大版Pad-1024
+    // @include breakpoint(md) {
+    // }
+    // // 小網-768
+    // @include breakpoint(sm) {
+    // }
+  }
